@@ -251,11 +251,6 @@ export class MainController {
   indexPage() {
     return View("index.md", {});
   }
-
-  @Get("/page")
-  defaultPage() {
-    return View("page.md", {});
-  }
 }
 
 const app = new App({
@@ -278,7 +273,7 @@ async function getMarkDownPage(path: string) {
   }
   let result = "";
 
-  const text = await Deno.readTextFile(`${Deno.cwd()}/views/index.md`);
+  const text = await Deno.readTextFile(`${Deno.cwd()}/views/${path}`);
   const parsed = Marked.parse(text).content
   result = getHtmlPage(parsed);
 
