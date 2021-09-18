@@ -1,4 +1,4 @@
-### アドオン作成の手引っぽいもの：とりあえず
+# アドオン作成の手引っぽいもの：とりあえず
 - 基本の基本：[[Blender] Blenderプラグインの作り方](https://qiita.com/nutti/items/a836391723bd28cd3e4c)
 - 基本：[「はじめてのBlenderアドオン開発 (Blender 2.8版)」](https://colorful-pico.net/introduction-to-addon-development-in-blender/2.8/index.html)
 - TomoG氏の： [Blenderでアドオンの作り方](https://www.tomog-storage.com/entry/Python-BlenderAddon-HowStarUp)
@@ -22,7 +22,7 @@
 
 <br>
 
-#### ◇ メニューの追加登録候補について(本体はまとめに移動)
+# ◇ メニューの追加登録候補について(本体はまとめに移動)
 * ユーザー設定 (`USERPREF`) はオペレーター関連 (`_OT_`) だけ `PREFERENCE`に分離されている
 * メニューの `append・prepend・remove` は、`scripts/modules/bpy_types.py` で定義されているので、(たぶん)変更可能
   * → 同名のメニューを自作メニューで置き換えるとかできるかも？
@@ -49,7 +49,7 @@
 
 <br>
 
-#### オペレーターやクラスのプロパティの情報を取得したい
+# オペレーターやクラスのプロパティの情報を取得したい
 `bpy.types.SubsurfModifier`の`boundary_smooth`の`PRESERVE_CORNERS`の説明文や、` bpy.ops.object.data_transfer`の`vert_mapping`の`EDGEINTERP_NEAREST`の説明文を流用したいが、いちいち API Document をコピペするのはちょっと...　というとき
 
 ◇ **`types.Hoge`がある場合**
@@ -97,7 +97,7 @@ class AddonPreferences(bpy.types.AddonPreferences):
 
 <br>
 
-◇ Blender のスクリーンショット作成機能とか
+# ◇ Blender のスクリーンショット作成機能とか
 * python のテストではアドオンの機能テストはできるけどパネル表示のテストはできないよね問題の解決に使えないか？
   * と思ったけどやっぱ無理？ invoke_default → スクショ →  キャンセルってできるんだろうか
 * UI というか各エディターの基本状態の画像一覧をこれで自動的に作りたい
