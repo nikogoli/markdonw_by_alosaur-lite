@@ -1,14 +1,15 @@
 ## Markdown to Web page by Alosaur-lite with Deno Deploy
 Alosaur-lite with Deno Deploy で markdown を webページにしようという話<br>
-とりあえず、McDoc につかった markdown を流用している
+
+今のところ、[zenn のスクラップ](https://zenn.dev/nikogoli/scraps/6dd7ae9ea6ad4f)の markdown を使っている
 
 ### 内容物
 - server.ts：もろもろの処理
 - html-page.ts：HTML
-- views/index.md：markdown ファイル
+- views/scrap.md：markdown ファイル
     <br>
 　　　↓<br>
-[結果 (deno deploy)](https://dash.deno.com/projects/strong-spider-60)
+[結果 (deno deploy)](https://dead-donkey-18.deno.dev/)
 <br>
 
 ### 使ってるもの
